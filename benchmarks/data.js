@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1648489956279,
+  "lastUpdate": 1648517068941,
   "repoUrl": "https://github.com/open-telemetry/opentelemetry-python-contrib",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.8 - sdkextension": [
@@ -28884,6 +28884,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 4.258936227133532e-8",
             "extra": "mean: 137.1840265879379 nsec\nrounds: 86957"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sankmeht@cisco.com",
+            "name": "Sanket Mehta",
+            "username": "sanketmehta28"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b1bf8d4a5470facb6e63f33ff57a144b20e2a319",
+          "message": "code change to add custom http and websocket request and response hea… (#1004)\n\n* code change to add custom http and websocket request and response headers as span attributes. Issue: https://github.com/open-telemetry/opentelemetry-python-contrib/issues/919\r\n\r\n* adding entry to changelog\r\n\r\n* changes after running \"tox -e generate\" locally\r\n\r\n* - added server_span.is_recording() in _get_otel_send() just to make sure the span is recording before adding the attributes to span.\r\n- changed span to current_span to make sure attributes are being added to proper span.\r\n\r\n* removed commented code\r\n\r\nCo-authored-by: Leighton Chen <lechen@microsoft.com>\r\nCo-authored-by: Srikanth Chekuri <srikanth.chekuri92@gmail.com>",
+          "timestamp": "2022-03-28T19:05:08-06:00",
+          "tree_id": "cb4782ee775abafb943adaedaf203c24184616dc",
+          "url": "https://github.com/open-telemetry/opentelemetry-python-contrib/commit/b1bf8d4a5470facb6e63f33ff57a144b20e2a319"
+        },
+        "date": 1648517061858,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_extract_single_header",
+            "value": 1513377.3203260868,
+            "unit": "iter/sec",
+            "range": "stddev: 1.456019424114426e-7",
+            "extra": "mean: 660.7737452974249 nsec\nrounds: 175439"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-aws-xray/tests/performance/benchmarks/test_benchmark_aws_xray_propagator.py::test_inject_empty_context",
+            "value": 2729744.203098177,
+            "unit": "iter/sec",
+            "range": "stddev: 5.676774897454686e-7",
+            "extra": "mean: 366.3346913110138 nsec\nrounds: 196079"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_trace_id",
+            "value": 3064503.5546660954,
+            "unit": "iter/sec",
+            "range": "stddev: 3.8306952259341383e-7",
+            "extra": "mean: 326.3171284227803 nsec\nrounds: 41667"
+          },
+          {
+            "name": "sdk-extension/opentelemetry-sdk-extension-aws/tests/performance/benchmarks/trace/test_benchmark_aws_xray_ids_generator.py::test_generate_xray_span_id",
+            "value": 7392606.943112415,
+            "unit": "iter/sec",
+            "range": "stddev: 3.585917064301633e-7",
+            "extra": "mean: 135.27027849514425 nsec\nrounds: 104167"
           }
         ]
       }
