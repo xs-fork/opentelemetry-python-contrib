@@ -68,6 +68,8 @@ You can pass multiple values to configure multiple exporters e.g, ``zipkin,prome
 
 Well known trace exporter names:
 
+    - console
+    - jaeger
     - jaeger_proto
     - jaeger_thrift
     - opencensus
